@@ -15,8 +15,10 @@ import javax.servlet.http.HttpServletRequest;
  * @author Jade BOUMAZA
  *
  */
-public class FormulaireCVForm {
+public class ProfilForm {
 	
+	private static final String CHAMP_NOM = "nom";
+	private static final String CHAMP_PRENOM = "prenom";
 	private static final String CHAMP_NUMTEL = "numTel";
 	private static final String CHAMP_DATENAISSANCE ="dateNaissance";
 	private static final String CHAMP_ADRESSE = "adresse";
@@ -24,15 +26,19 @@ public class FormulaireCVForm {
 		
 	public InfosCV remplirInfosCV(HttpServletRequest request) {
 		
-		String numTel = getValeurChamp(request, CHAMP_NUMTEL);
-		String dateNaissance = getValeurChamp(request,CHAMP_DATENAISSANCE);
-		String adresse = getValeurChamp(request,CHAMP_ADRESSE);
+		String nom = getValeurChamp(request, CHAMP_NOM);
+		String prenom = getValeurChamp(request, CHAMP_PRENOM);
+		//String numTel = getValeurChamp(request, CHAMP_NUMTEL);
+		//String dateNaissance = getValeurChamp(request,CHAMP_DATENAISSANCE);
+		//String adresse = getValeurChamp(request,CHAMP_ADRESSE);
 		
 		InfosCV infosCV = new InfosCV();
 		
-		infosCV.setNumTel(numTel);
-		infosCV.setDateNaissance(dateNaissance);
-		infosCV.setAdresse(adresse);
+		infosCV.setNom(nom);
+		infosCV.setPrenom(prenom);
+		//infosCV.setNumTel(numTel);
+		//infosCV.setDateNaissance(dateNaissance);
+		//infosCV.setAdresse(adresse);
 		
 		return infosCV;		
 		
