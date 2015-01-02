@@ -75,7 +75,7 @@ public class SignupForm {
 	private void validationPassword(String password, String confirmation) throws Exception {
 		if (password != null && password.length() >= 5) {
 			if (!password.equals(confirmation)) {
-				throw new Exception("Attention : les mots de passe entrés sont différents.");
+				throw new Exception("Les mots de passe entrés sont différents.");
 			}
 		}
 		else {
